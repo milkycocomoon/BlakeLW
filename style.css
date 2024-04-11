@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+:root {
+    --color-bg: var(--color-grayscale-100);
+    --color-text: var(--color-grayscale-900);
+
+    --color-grayscale-000: hsl(0 0 100);
+    --color-grayscale-100: hsl(165 25 97);
+
+    --color-grayscale-300: hsl(85 15 90);
+    --color-grayscale-400: hsl(144 5 79);
+    --color-grayscale-500: hsl(86 6 44);
+
+    --color-grayscale-800: hsl(120 2 13);
+    --color-grayscale-900: hsl(0 0 6);
+
+    --border-r: 0.4rem;
+}
+
+* {
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+
+    color: var(--color-text);
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0 1rem;
+    background-color: var(--color-bg);
+    max-width: 84rem;
+}
+/* FIX DEFAULT */
+img {
+    width: 100%;
+    background-size: cover;
+}
+
+h1 {
+    font-size: 6rem;
+    font-weight: 800;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+h1, h4, span, p {
+    margin: 0;
+}
+/* FIX DEFAULT */
+
+
+
+/* BASIC CLASSES */
+.flex {
+    display: flex;
+}
+
+.flex-j-sb {
+    justify-content: space-between;
+}
+
+.flex-al-c {
+    align-items: center;
+}
+
+.padding {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+.span-styled {
+    display: block;
+    width: 4rem;
+    height: 0.1rem;
+    margin-right: 1rem;
+    background-color: var(--color-grayscale-500);
+}
+
+.p-styled {
+    font-size: 1.5rem;
+    font-style: oblique;
+    color: var(--color-grayscale-500);
+}
+
+.b-r {
+    border-radius: var(--border-r);
+}
+/* BASIC CLASSES */
+
+
+
+/* ------------------------------------------------------ SPECIAL CASES */
+/* NAVBAR GRID*/
+.nav-bar {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 7fr repeat(7, 1fr);
+    justify-items: end;
+    gap: 1rem;
+}
+
+.nav-bar__logo {
+    justify-self: start;
+}
+
+.nav-bar__burger-btn {
+    opacity: 0;
+    user-select: none;
+}
+/* NAVBAR */
+
+/* HEADER */
+.header__text-div {
+    width: 44rem;
+}
+
+.header__image-div {
+    width: 34rem;
+}
+/* HEADER */
+/* ------------------------------------------------------ SPECIAL CASES */
