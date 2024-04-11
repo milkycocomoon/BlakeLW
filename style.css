@@ -101,6 +101,11 @@ h1, h3, h4, span, p {
 .b-r {
     border-radius: var(--border-r);
 }
+
+.b-left {
+    border-left: 0.4rem solid var(--color-bg);
+    padding-left: 1rem;
+}
 /* BASIC CLASSES */
 
 
