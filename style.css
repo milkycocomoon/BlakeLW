@@ -54,7 +54,11 @@ h4 {
     font-weight: 400;
 }
 
-h1, h3, h4, span, p {
+h1,
+h3,
+h4,
+span,
+p {
     margin: 0;
 }
 /* FIX DEFAULT */
@@ -101,7 +105,8 @@ h1, h3, h4, span, p {
     color: var(--color-grayscale-500);
 }
 
-.c-wh, .c-wh * {
+.c-wh,
+.c-wh * {
     color: var(--color-bg);
 }
 
@@ -203,7 +208,8 @@ h1, h3, h4, span, p {
 }
 /* SERVICES */
 /* VIDEOS */
-.videos_header {
+.videos_header,
+.credits_header {
     border-bottom: 0.4rem solid var(--color-bg);
 }
 
@@ -221,4 +227,32 @@ h1, h3, h4, span, p {
     justify-content: center;
 }
 /* VIDEOS */
+/* CREDITS */
+.credits_header {
+    width: fit-content;
+}
+
+.credits_div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.credits_item {
+    border: 0.1rem solid var(--color-bg);
+}
+
+.credits_item-img {
+    outline: 0.1rem solid var(--color-bg);
+}
+
+.credits_item_info {
+    padding: 1rem 1rem 3rem;
+}
+
+.item_info-p {
+    margin-top: 1rem;
+    color: var(--color-grayscale-400);
+}
+/* CREDITS */
 /* ------------------------------------------------------ SPECIAL CASES */
