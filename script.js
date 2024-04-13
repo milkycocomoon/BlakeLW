@@ -20,3 +20,24 @@ navbarDiv.addEventListener('click', toggleMenu);
 function toggleMenu() {
     navbarDiv.classList.toggle('nav-bar__active');
 };
+
+// RENDER SERVICES
+const servicesDiv = document.querySelector('.services_div');
+import servicesList from './js/dataServices.js';
+
+function renderServicesHTML() {
+
+    const html = servicesList.map((servicesList) => {
+        return  `
+                <a href="${servicesList.link}" class="c-wh b-r | services_item services_item-${servicesList.item}">
+                  <div class="b-left">
+                    <h3>${servicesList.name}</h3>
+                    <p>${servicesList.description}</p>
+                  </div>
+                </a>
+                `
+    }).join('');
+    servicesDiv.innerHTML = html;
+};
+
+renderServicesHTML();
