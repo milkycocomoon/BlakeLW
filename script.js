@@ -41,3 +41,26 @@ function renderServicesHTML() {
 };
 
 renderServicesHTML();
+
+// RENDER CREDITS
+const creditsDiv = document.querySelector('.credits_div');
+import creditsList from './js/dataCredits.js';
+
+function renderCreditsHTML() {
+
+    const html = creditsList.map((creditsList) => {
+        return  `
+                <div class="b-r | credits_item">
+                  <img class="b-r | credits_item-img" src="./assets/images/credits_${creditsList.item}.webp" alt="${creditsList.name} album cover">
+                  <div class="credits_item_info">
+                    <h4><i>${creditsList.band}</i></h4>
+                    <h3>${creditsList.name}</h3>
+                    <p class="item_info-p">${creditsList.role}</p>
+                  </div>
+                </div>
+                `
+    }).join('');
+    creditsDiv.innerHTML = html;
+};
+
+renderCreditsHTML();
