@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>BlakeLW</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="./assets/icons/Loreweaver.svg" type="image/x-icon">
 </head>
 <body>
   <nav>
@@ -12,11 +13,11 @@
     <ul class="width | nav-bar">
       <li class="nav-bar__logo"><a href="#">Blake Harrison</a></li>
       <li><a href="#">Home</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Videos</a></li>
-      <li><a href="#">Credits</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#Services">Services</a></li>
+      <li><a href="#Videos">Videos</a></li>
+      <li><a href="#Credits">Credits</a></li>
+      <li><a href="#About">About</a></li>
+      <li><a href="#Contact">Contact</a></li>
     </ul>
   </nav>
   <header class="width flex flex-j-sb flex-al-c padding gap | header-div">
@@ -33,16 +34,16 @@
 
   <main>
     <article class="width padding">
-      <h2 class="fit | services_header">Services</h2>
+      <h2 class="fit | services_header" id="Services">Services</h2>
       <div class="services_div"></div>
     </article>
 
     <div class="dark-bg">
       <div class="c-wh | width padding">
         <article>
-          <h2 class="videos_header">Videos</h2>
+          <h2 class="videos_header" id="Videos">Videos</h2>
           <div class=" gap | videos_info">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p>Here, you can find anywhere from audio engineering tutorials, tips and tricks, to showing off some of my projects. If you would like to follow me more closely, here would be the best place.</p>
             <a class="b-r fit flex flex-al-c flex-j-sb | videos_btn" href="https://www.youtube.com/@BlakeLW" target="_blank">Subscribe to Youtube channel</a>
           </div>
           <div class="flex wrap flex-j-sb | videos_div">
@@ -54,35 +55,30 @@
         </article>
 
         <article>
-          <h2 class="fit | credits_header">Credits</h2>
+          <h2 class="fit | credits_header" id="Credits">Credits</h2>
           <div class="gap | credits_div"></div>
         </article>
       </div>
     </div>
 
     <article class="width padding">
-      <h2 class="fit | contact_header">Contact me</h2>
+      <h2 class="fit | contact_header" id="Contact">Contact me</h2>
 
       <div class="flex flex-j-sb gap | contact-about-div">
 
         <div class="width-100 | contact-div">
-          <div class="c-wh b-r | services_item services_item-01">
-            <div class="b-left">
+          <div class="contact-info"></div>
 
-              <h4>Requirements to submit:</h4>
-              <h3>Mixing & Mastering</h3>
-              <p>For those wanting to bring an idea to life to the final touches to your mix.</p>
-              <p class="p-normal">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-              <p class="p-normal">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            </div>
-          </div>
-
-          <form class="form" action="">
+          <form class="form" target="_blank" action="https://formsubmit.co/blakelwcontact@gmail.com" method="POST">
+            <input type="text" name="_honey" style="display: none;">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://milkycocomoon.github.io/BlakeLW/index.html#Contact?a=1">
 
             <div class="flex flex-al-c gap">
               <label for="service_type">Service&nbsp;Type:</label>
-              <select class="b-r input-style" name="service_type" id="service_type">
-                <option value="mixing_&_mastering">Mixing & Mastering</option>
+              <select class="b-r input-style" name="Service&nbsp;Type" id="service_type" required>
+                <option value="mixing_&_mastering" selected>Mixing & Mastering</option>
                 <option value="post_production">Post Production</option>
                 <option value="guidance">Guidance</option>
                 <option value="collab">Collab</option>
@@ -91,31 +87,30 @@
 
             <div class="flex flex-al-c gap">
               <label for="name">Name:</label>
-              <input class="b-r input-style" type="text">
+              <input class="b-r input-style" type="text" name="Name" id="name" required autocomplete="name">
             </div>
 
             <div class="flex flex-al-c gap">
               <label for="email">Email:</label>
-              <input class="b-r input-style" type="email" name="email" id="email">
+              <input class="b-r input-style" type="email" name="Email" id="email" required autocomplete="email">
             </div>
 
             <label for="description">Description:</label>
-            <textarea class="b-r input-style textarea" id="description" name="description" rows="10" placeholder="Write your task description here..."></textarea>
+            <textarea class="b-r input-style textarea" name="Description" id="description" rows="10" placeholder="Write your task description here..." required></textarea>
 
             <input class="b-r input-style" type="submit" value="Submit">
           </form>
+          <div class="overlay remove"></div>
+          <div class="success remove"></div>
         </div>
 
-
         <div class="width-100 flex | about-div">
-          <div class="b-r width-100 | about_item-00">
-          </div>
-
+          <div class="b-r width-100 | about_item-00"></div>
           <div class="flex flex-al-c">
             <span class="span-styled"></span>
-            <p class="p-styled">The quiet, calm guy</p>
+            <p class="p-styled">I mix meticulously so you don't have to</p>
           </div>
-          <h2 class="about_header">About me</h2>
+          <h2 class="about_header" id="About">About me</h2>
           <p>From even my earliest memories, I've strived to make music a part of my life. From playing guitar for hours every day, to spending countless hours trying to level up my audio engineering knowledge. I've dedicated myself to creating the best music that I can, and create the best mixes that I can achieve.</p>
           <p>Now that I'm where I'm comfortable, I want to help others make their dreams become a reality.</p>
         </div>
@@ -128,6 +123,7 @@
     <div class="width padding flex flex-j-sb flex-al-c c-wh gap | footer-div">
       <p><i>©2024 Blake Harrison. All rights reserved.<br>Website designed and developed by Milkycocomoon</i></p>
       <div>
+        <a href="https://www.facebook.com/profile.php?id=61558206276347"><img class="icon" src="./assets/icons/Facebook.svg" alt="Facebook icon"></a>
         <a href="https://www.instagram.com/theactualblake/"><img class="icon" src="./assets/icons/Instagram.svg" alt="Instagram icon"></a>
         <a href="https://open.spotify.com/artist/6sGwGYCziHNa1MUPXDVUbu?si=x3aeEQb1Rqe_5bNX4IR-5A"><img class="icon" src="./assets/icons/Spotify.svg" alt="Spotify icon"></a>
         <a href="https://www.youtube.com/@BlakeLW"><img class="icon" src="./assets/icons/YouTube.svg" alt="YouTube icon"></a>
