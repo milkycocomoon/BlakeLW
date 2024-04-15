@@ -51,7 +51,7 @@ function renderCreditsHTML() {
     const html = creditsList.map((creditsList) => {
         return  `
                 <div class="b-r | credits_item">
-                  <img class="b-r | credits_item-img" src="./assets/images/credits_${creditsList.item}.webp" alt="${creditsList.name} album cover">
+                  <img loading="lazy" class="b-r | credits_item-img" src="./assets/images/credits_${creditsList.item}.webp" alt="${creditsList.name} album cover">
                   <div class="credits_item_info">
                     <h4><i>${creditsList.band}</i></h4>
                     <h3>${creditsList.name}</h3>
