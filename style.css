@@ -4,12 +4,12 @@
     --color-text: var(--color-grayscale-900);
 
     --color-grayscale-000: hsl(0, 0%, 100%);
-    --color-grayscale-300: hsl(110, 5%, 90%);
-    --color-grayscale-400: hsl(105, 5%, 80%);
-    --color-grayscale-500: hsl(110, 5%, 40%);
-    --color-grayscale-600: hsl(115, 5%, 30%);
-    --color-grayscale-700: hsl(130, 5%, 20%);
-    --color-grayscale-800: hsl(160, 3%, 15%);
+    --color-grayscale-300: hsl(210, 5%, 90%);
+    --color-grayscale-400: hsl(205, 5%, 80%);
+    --color-grayscale-500: hsl(210, 5%, 40%);
+    --color-grayscale-600: hsl(215, 5%, 30%);
+    --color-grayscale-700: hsl(230, 5%, 20%);
+    --color-grayscale-800: hsl(260, 3%, 15%);
     --color-grayscale-900: hsl(0, 0%, 5%);
 
     --color-success-500: hsl(110, 20%, 50%);
@@ -130,6 +130,11 @@ i {
 .c-wh,
 .c-wh * {
     color: var(--color-bg);
+}
+
+.c-wh-calm,
+.c-wh-calm * {
+    color: var(--color-grayscale-400);
 }
 
 .b-r {
@@ -253,19 +258,54 @@ div.services_item {
 
 .videos_header,
 .credits_header {
-    border-bottom: 0.2rem solid var(--color-bg);
+    color: var(--color-bg);
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    border: none;
+}
+
+.videos_header {
+    margin-top: 20rem;
+}
+
+.gradient-text {
+    font-size: 5rem;
+    background-color: var(--color-bg);
+    background-image: linear-gradient(90deg, rgba(222,70,252,1) 0%, rgba(161,66,219,1) 48%, rgba(64,79,208,1) 75%, rgba(63,142,251,1) 100%);
+    background-size: 300% 300%;
+    background-position: 0% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    animation: gradient 10s linear infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 100%;
+    }
+    50% {
+        background-position: 100% 0%;
+    }
+    100% {
+        background-position: 0% 100%;
+    }
 }
 
 .videos_info {
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2fr 1fr;
+    justify-items: end
 }
 
 .videos_btn {
     width: 20rem;
-    padding: 0.6rem;
+    padding: 0.6rem 1rem;
     text-align: center;
     align-self: center;
+    font-weight: 600;
     background-color: var(--color-grayscale-800);
     line-height: 1.5rem;
 }
@@ -281,8 +321,8 @@ div.services_item {
 
 .videos_btn::after {
     display: block;
-    width: 1.4rem;
-    height: 1.4rem;
+    width: 1rem;
+    height: 1rem;
     content: "";
     background-image: url(./assets/icons/Forward.svg);
     background-size: cover;
@@ -290,10 +330,7 @@ div.services_item {
 
 .videos_div {
     gap: 2rem;
-    margin: 2rem auto;
-    padding: 2rem 0;
-    border-top: 0.1rem solid var(--color-bg);
-    border-bottom: 0.1rem solid var(--color-bg);
+    padding: 14rem 0;
     justify-content: center;
 }
 
@@ -475,6 +512,62 @@ select {
     cursor: pointer;
 }
 
+.running-line {
+    width: 100%;
+    height: 3rem;
+    background-color: #5662F6;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+.running-line_text {
+    display: inline-block;
+    font-size: 1.4rem;
+    line-height: 3rem;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    white-space: pre;
+}
+
+.line_text-1 {
+    animation: run 70s linear infinite;
+    animation-delay: -70s;
+}
+.line_text-2 {
+    animation: run2 70s linear infinite;
+    animation-delay: -35s;
+}
+
+.running-line_text::before {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin: 0 1rem;
+    content: "";
+    background-image: url(./assets/icons/Discord.svg);
+    background-size: cover;
+}
+
+@keyframes run {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes run2 {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
 @media screen and (max-width:65rem) {
     .services_div {
         grid-template-columns: repeat(3, 1fr);
@@ -604,6 +697,11 @@ select {
             "c d";
         gap: 1.8rem;
     }
+
+    .footer-div {
+        padding: 8rem 1rem;
+    }
+
 }
 
 @media screen and (max-width:32rem) {
@@ -620,6 +718,14 @@ select {
             "c c"
             "d d";
         gap: 1.8rem;
+    }
+
+    .gradient-text {
+        font-size: 4rem;
+    }
+
+    i{
+        font-size: 0.6rem;
     }
 }
 
@@ -649,6 +755,10 @@ select {
 
     .icon:hover {
         opacity: 1;
+    }
+
+    .running-line:hover {
+        background-color: #4751df;
     }
 
     .success_cancel:hover {
