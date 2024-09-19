@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlakeLW</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="shortcut icon" href="../assets/icons/Loreweaver.svg" type="image/x-icon">
+
+  <style>
+    body {
+        margin: 4rem auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main {
+        max-width: 50rem;
+        margin-bottom: 2rem;
+    }
+
+    .lw-logo {
+        display: block;
+        width: 120px;
+        height: 120px;
+        background-image: url(../assets/icons/Loreweaver-logo.svg);
+        background-size: cover;
+        filter: invert(1);
+        transition: all 1s;
+    }
+
+    .lw-logo:hover {
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    h1 {
+        margin: 1rem 0;
+    }
+
+    h2 {
+        margin: 4rem 0 2rem 0;
+    }
+
+    h3, p {
+        margin: 2rem 0;
+    }
+
+    span, b {
+        color: var(--color-grayscale-800);
+    }
+
+    .custom-checkbox {
+        display: flex;
+        align-items: center;
+        border-radius: var(--border-r);
+        margin: 2px 0;
+        cursor: pointer;
+    }
+
+    .custom-checkbox input {
+        display: none;
+    }
+
+    .label-text {
+        width: 100%;
+        background-color: var(--color-grayscale-000);
+        border-radius: var(--border-r);
+        padding: 1.5rem 2rem;
+    }
+
+    .custom-checkbox input:checked + .checkmark + .label-text {
+        opacity: 0.5;
+    }
+
+    table * {
+        color: var(--color-grayscale-800);
+    }
+  </style>
+</head>
+<body>
+    <main>
+        <a class="lw-logo" href="../index.html" title="Return to home page"></a>
+        <a href="../index.html#Contact" title="Return to home page"><h1>&#10094; Guidelines</h1></a>
+
+        <div class="flex" style="opacity: 0.4;">
+            <h3>Cheat sheet for self-check</h3>
+            <span class="line"></span>
+            <p>Click on cards to mark them done</p>
+        </div>
+        <h2>RE-AMP, MIX & MASTER</h2>
+        <div id="0"></div>
+
+        <h2>PREP AND EDITING</h2>
+        <h3>Basics</h3>
+        <div id="1"></div>
+
+        <h3>Vocals</h3>
+        <div id="2"></div>
+
+        <h3>Guitars and Bass</h3>
+        <div id="3"></div>
+
+        <h3>Drums</h3>
+        <div id="4"></div>
+
+        <h3>Stem Mastering</h3>
+        <p>For a stem master, you only need to provide WAV files. These should be separated into the following stems:</p>
+        <div id="5"></div>
+
+        <h3>Backing Tracks</h3>
+        <p>Stems and BT's must be requested upon booking, as we do not hold to projects indefinitely. Even if we did, there's no guarantee that older versions of plugins used in your session will still be supported if too much time elapses between enquiries.</p>
+
+        <h3>Accreditation</h3>
+        <p>Blake's role in the production must be included in the YouTube video description. Digital Streaming Platform credits and physical linear notes: Eg. "Re-amped, mixed and mastered by Blake Harrison".</p>
+
+        <span class="line-xl"></span>
+    </main>
+</body>
+<script>
+const reampMixMasterChecks = [`All audio files should be sent at the same sample/bit rate they were recorded in`,
+    `It is preferred that MIDI for drums and bass are included, even if you're providing live recordings`,
+    `Include a MIDI file containing tempo information for the whole project`,
+    `All audio must be edited to the grid before submitting`,
+    `All files must be exported from one bar before the first song starts`,
+    `Label files clearly, specifying the instrument first. This makes it easier to find the right track at a glance. For example: "Guitar 1L" / "GTR 1 L" / "GTR Rhythm L" would all be acceptable naming conventions for the rhythms guitar track`,
+    `Label all panned tracks with an "L" or an "R". Note that Cubase defaults to bouncing out stereo tracks in dual mono, labeling the resultings WAVs as A1 and A2. If you're a Cubase user, please relabel these as "L" and "R" respectively before sending`,
+    `Send mono tracks of mono signals, not stereo tracks of mono signals. Examples of mono signals are vocals, DI's and spot mics. Examples of stereo signals include overheads, rooms, synths and FX`,
+    `All revisions must include timestamps. Refer to specific file names where possible`,
+
+    `Include a MIDI map showing which drum sounds you've assigned to which notes. This can be provided as a plain text document or table. <b>Example:</b>
+    <table border=1 style="width:100%; border:0; margin:1rem 0">
+    <tr style="background-color:var(--color-grayscale-500)">
+        <th>Pitch</th>
+        <th>Instrument</th>
+    </tr>
+    <tr>
+        <td>C1</td>
+        <td>Bass Drum</td>
+    </tr>
+    <tr>
+        <td>C#1</td>
+        <td>Side Stick</td>
+    </tr>
+    <tr>
+        <td>D1</td>
+        <td>Acoustic Snare</td>
+    </tr>
+    <tr>
+        <td>D#1</td>
+        <td>Hand Clap</td>
+    </tr></table>`,
+];
+
+const basicChecks = [`All instrumental tracks must be edited 100% to the grid, unless we agree that the music benefits from a less polished performance`,
+    `Remove silence on all tracks and check that nothing's been accidentally cut short in the process`,
+    `Your tracks should peak between -12db and -6db in order to provide headroom and avoid clipping`,
+    `When you've finished preparing your files, check your work by loading them into your DAW`,
+];
+
+const vocalChecks = [`Apply pitch correction to all melodic vocal takes`,
+    `Provide separate tracks for clean vocals vs screams`,
+    `Separate high and low screams into separate tracks so they can be processed independently of one another`,
+    `De-breathing is encouraged, so long as it sounds natural`,
+];
+
+const guitarAndBassChecks = [`Ensure your guitars are set up and intonated prior to tracking`,
+    `Use new strings to record`,
+    `Check your tuning between takes`,
+    `Provide DI's for all guitar parts, even if you're also providing the amp tracks. Label these as such - eg. "Guitar 1 L" and "Guitar 1 L DI"`,
+    `Export guitar parts that are reliant on FX as fully processed files, rather than just DI's. 99% of the time it's better to mix these as they are, rather than trying to recreate your exact FX signal chain`,
+    `If you're tracking with a noise gate. Remove all unwanted noise that remains audible when the gate's turned off before you export the DI`,
+    `Check the quality of the DI by listening through to your tracks with any amp simulations turned off`,
+    `MIDI is perfectly acceptable as an alternative to live bass recordings. Please include a MIDI map if you're using key-switches to trigger different articulations`,
+];
+
+const drumChecks = [`Record live drums in a real studio with a pro engineer`,
+    `MIDI drums are always preferable to bad live recordings`,
+    `Remove all bleed between hits on the spot mics - particularly the toms`,
+];
+
+const stemMasteringChecks = [`Vocals`,
+    `Synths`,
+    `Guitar Leads`,
+    `Guitars Clean`,
+    `Guitars Dist`,
+    `Bass`,
+    `Drums`,
+    `FX`,
+];
+const zero = document.getElementById('0');
+const one = document.getElementById('1');
+const two = document.getElementById('2');
+const three = document.getElementById('3');
+const four = document.getElementById('4');
+const five = document.getElementById('5');
+
+function generateCheck(text, here) {
+    const checkboxHTML = `
+        <label class="custom-checkbox">
+            <input type="checkbox"/>
+            <span class="checkmark"></span>
+            <span class="label-text">${text}</span>
+        </label>
+    `;
+    here.insertAdjacentHTML('beforeend', checkboxHTML);
+}
+
+reampMixMasterChecks.forEach(text => generateCheck(text, zero));
+basicChecks.forEach(text => generateCheck(text, one));
+vocalChecks.forEach(text => generateCheck(text, two));
+guitarAndBassChecks.forEach(text => generateCheck(text, three));
+drumChecks.forEach(text => generateCheck(text, four));
+stemMasteringChecks.forEach(text => generateCheck(text, five));
+
+</script>
+</html>

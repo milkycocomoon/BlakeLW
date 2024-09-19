@@ -9,223 +9,238 @@
 </head>
 <body>
   <nav>
-    <li class="nav-bar__burger-btn">&#9776;</li>
-    <ul class="width | nav-bar">
-      <li class="nav-bar__logo"><a href="#">Blake Harrison</a></li>
+    <ul class="nav-bar">
+      <li><a href="#" class="logo-icon"></a></li>
       <li><a href="#">Home</a></li>
       <li><a href="#Services">Services</a></li>
-      <li><a href="#Videos">Videos</a></li>
+      <li><a href="#Youtube">Videos</a></li>
+      <li><a href="#Merch">Merch</a></li>
       <li><a href="#Credits">Credits</a></li>
-      <li><a href="#About">About</a></li>
-      <li><a href="#Contact">Contact</a></li>
+      <li><a href="#About" id="about-default">About</a></li>
+      <li><a href="#About" id="about-palevoid">Palevoid</a></li>
+      <li><a href="#Contact" class="button_outline_b">Contact</a></li>
     </ul>
+    <li class="nav-bar-mob">&#9776;</li>
   </nav>
-  <header class="width flex flex-j-sb flex-al-c padding gap | header-div">
-    <div class="header__text-div">
-      <div class="flex flex-al-c">
-        <span class="span-styled"></span>
-        <p class="p-styled">The quiet, calm guy</p>
+
+  <header>
+    <div class="header-screen">
+      <div>
+        <span class="line"></span>
+        <p class="line-p">The quiet, calm guy</p>
       </div>
       <h1>Blake Harrison</h1>
-      <h4>Guitarist, producer, mix and master engineer, content creator</h4>
+      <h4>Mix & Master Engineer, Producer,<br>Guitarist, Content Creator and Artist</h4>
     </div>
-    <div class="b-r | header__image-div"></div>
   </header>
 
   <main>
-    <article class="width padding">
-      <h2 class="fit | services_header" id="Services">Services</h2>
-      <div class="services_div"></div>
+    <article id="Services">
+      <div class="flex">
+        <h2>Services</h2>
+        <h3><a href="./pages/terms.html">Terms</a></h3>
+        <span class="line-xl"></span>
+        <h3>2024</h3>
+      </div>
+      <div class="flex short-gap services-div"></div>
     </article>
 
-    <div class="dark-bg">
-      <div class="c-wh-calm | width padding">
-        <article>
-          <h2 class="fit | videos_header" id="Videos">Check out my<br><span class="gradient-text">Youtube channel</span></h2>
-          <div class=" gap | videos_info">
-            <p>Here, you can find anywhere from audio engineering tutorials, tips and tricks, to showing off some of my projects. If you would like to follow me more closely, here would be the best place.</p>
-            <a class="b-r fit flex flex-al-c flex-j-sb | videos_btn" href="https://www.youtube.com/@BlakeLW" target="_blank">Subscribe to Youtube channel</a>
-          </div>
-          <div class="flex wrap flex-j-sb | videos_div">
-            <iframe loading="lazy"
-              srcdoc="
-              <style>
-                * {
-                padding: 0;
-                margin: 0;
-                overflow: hidden;
-                }
-
-                img {
-                  width: 100%;
-                }
-              </style>
-
-              <a href='https://www.youtube-nocookie.com/embed/K02jYhT1ac8'>
-                <img src='https://i.ytimg.com/vi/K02jYhT1ac8/maxresdefault.jpg' alt='Quick guide on how to write thall riffs'>
-              </a>
-              "
-              src="https://www.youtube-nocookie.com/embed/K02jYhT1ac8"
-              title="Quick guide on how to write thall riffs" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
-            </iframe>
-
-            <iframe loading="lazy"
-              srcdoc="
-              <style>
-                * {
-                padding: 0;
-                margin: 0;
-                overflow: hidden;
-                }
-
-                img {
-                  width: 100%;
-                }
-              </style>
-
-              <a href='https://www.youtube-nocookie.com/embed/JKBLBagDuv8'>
-                <img src='https://i.ytimg.com/vi/JKBLBagDuv8/maxresdefault.jpg' alt='Thall guitar tone tutorial'>
-              </a>
-              "
-              src="https://www.youtube-nocookie.com/embed/JKBLBagDuv8"
-              title="Thall guitar tone tutorial" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
-            </iframe>
-
-            <iframe loading="lazy"
-              srcdoc="
-              <style>
-                * {
-                padding: 0;
-                margin: 0;
-                overflow: hidden;
-                }
-
-                img {
-                  width: 100%;
-                }
-              </style>
-
-              <a href='https://www.youtube-nocookie.com/embed/Z6DYgXLyPCc'>
-                <img src='https://i.ytimg.com/vi/Z6DYgXLyPCc/maxresdefault.jpg' alt='Ultimate guide to record your first project in Reaper / Timestamps included'>
-              </a>
-              "
-              src="https://www.youtube-nocookie.com/embed/Z6DYgXLyPCc"
-              title="Ultimate guide to record your first project in Reaper / Timestamps included" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
-            </iframe>
-
-            <iframe loading="lazy"
-              srcdoc="
-              <style>
-                * {
-                padding: 0;
-                margin: 0;
-                overflow: hidden;
-                }
-
-                img {
-                  width: 100%;
-                }
-              </style>
-
-              <a href='https://www.youtube-nocookie.com/embed/l9As4XK01KU'>
-                <img src='https://i.ytimg.com/vi/l9As4XK01KU/maxresdefault.jpg' alt='Thall riff'>
-              </a>
-              "
-              src="https://www.youtube-nocookie.com/embed/l9As4XK01KU"
-              title="Thall riff" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
-            </iframe>
-          </div>
-        </article>
-
-        <article>
-          <h2 class="fit | credits_header" id="Credits">Credits</h2>
-          <div class="gap | credits_div"></div>
-        </article>
+    <article id="Youtube">
+      <div class="flex youtube-bar">
+        <h2>Youtube</h2>
+        <span class="line-xl"></span>
+        <h3>MUSIC</h3>
+        <span class="line"></span>
+        <h3>TUTORIALS</h3>
+        <span class="line"></span>
+        <h3>STREAMS</h3>
+        <span class="line"></span>
+        <a href="https://www.youtube.com/@BlakeLW?sub_confirmation=1" class="button_fill_w">Subscribe</a>
       </div>
-    </div>
+      <div class="flex cards-youtube">
+        <iframe loading="lazy" class="card-youtube"
+          srcdoc="
+          <style>
+            * {
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            }
 
-    <article class="width padding">
-      <h2 class="fit | contact_header" id="Contact">Contact me</h2>
+            img {
+              width: 100%;
+              filter: grayscale(1) brightness(1.6) contrast(0.8);
+            }
+          </style>
 
-      <div class="flex flex-j-sb gap | contact-about-div">
+          <a href='https://www.youtube-nocookie.com/embed/Cb8S935NsTE'>
+            <img src='https://i.ytimg.com/vi/Cb8S935NsTE/maxresdefault.jpg' alt='Triple Drop A Thall to put you to sleep'>
+          </a>
+          "
+          src="https://www.youtube-nocookie.com/embed/Cb8S935NsTE"
+          title="Triple Drop A Thall to put you to sleep" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+        <iframe loading="lazy" class="card-youtube"
+              srcdoc="
+              <style>
+                * {
+                padding: 0;
+                margin: 0;
+                overflow: hidden;
+                }
 
-        <div class="width-100 | contact-div">
-          <div class="contact-info"></div>
+                img {
+                  width: 100%;
+                  filter: grayscale(1) brightness(1.6) contrast(0.8);
+                }
+              </style>
 
-          <form class="form" target="_blank" action="https://formsubmit.co/blakelwcontact@gmail.com" method="POST">
-            <input type="text" name="_honey" style="display: none;">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_next" value="https://milkycocomoon.github.io/BlakeLW/index.html#Contact?a=1">
+              <a href='https://www.youtube-nocookie.com/embed/VfhP440ndIE'>
+                <img src='https://i.ytimg.com/vi/VfhP440ndIE/maxresdefault.jpg' alt='Metal Mixing 101 - Balance your mix!'>
+              </a>
+              "
+              src="https://www.youtube-nocookie.com/embed/VfhP440ndIE"
+              title="Metal Mixing 101 - Balance your mix!" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+        </iframe>
+        <iframe loading="lazy" class="card-youtube"
+              srcdoc="
+              <style>
+                * {
+                padding: 0;
+                margin: 0;
+                overflow: hidden;
+                }
 
-            <div class="flex flex-al-c gap">
-              <label for="service_type">Service&nbsp;Type:</label>
-              <select class="b-r input-style" name="Service&nbsp;Type" id="service_type" required>
-                <option value="mixing_&_mastering" selected>Mixing & Mastering</option>
-                <option value="post_production">Post Production</option>
-                <option value="guidance">Guidance</option>
-                <option value="collab">Collab</option>
-              </select>
-            </div>
+                img {
+                  width: 100%;
+                  filter: grayscale(1) brightness(1.3);
+                }
+              </style>
 
-            <div class="flex flex-al-c gap">
-              <label for="name">Name:</label>
-              <input class="b-r input-style" type="text" name="Name" id="name" required autocomplete="name">
-            </div>
+              <a href='https://www.youtube-nocookie.com/embed/P1XItFDjrEA'>
+                <img src='https://i.ytimg.com/vi/P1XItFDjrEA/maxresdefault.jpg' alt='How to route your mix for MAXIMUM impact!'>
+              </a>
+              "
+              src="https://www.youtube-nocookie.com/embed/P1XItFDjrEA"
+              title="How to route your mix for MAXIMUM impact!" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+        </iframe>
+        <iframe loading="lazy" class="card-youtube"
+              srcdoc="
+              <style>
+                * {
+                padding: 0;
+                margin: 0;
+                overflow: hidden;
+                }
 
-            <div class="flex flex-al-c gap">
-              <label for="email">Email:</label>
-              <input class="b-r input-style" type="email" name="Email" id="email" required autocomplete="email">
-            </div>
+                img {
+                  width: 100%;
+                  filter: grayscale(1);
+                }
+              </style>
 
-            <label for="description">Description:</label>
-            <textarea class="b-r input-style textarea" name="Description" id="description" rows="10" placeholder="Write your task description here..." required></textarea>
-
-            <input class="b-r input-style" type="submit" value="Submit">
-          </form>
-          <div class="overlay remove"></div>
-          <div class="success remove"></div>
-        </div>
-
-        <div class="width-100 flex | about-div">
-          <div class="b-r width-100 | about_item-00"></div>
-          <div class="flex flex-al-c">
-            <span class="span-styled"></span>
-            <p class="p-styled">I mix meticulously so you don't have to</p>
-          </div>
-          <h2 class="about_header" id="About">About me</h2>
-          <p>From even my earliest memories, I've strived to make music a part of my life. From playing guitar for hours every day, to spending countless hours trying to level up my audio engineering knowledge. I've dedicated myself to creating the best music that I can, and create the best mixes that I can achieve.</p>
-          <p>Now that I'm where I'm comfortable, I want to help others make their dreams become a reality.</p>
-        </div>
-
+              <a href='https://www.youtube-nocookie.com/embed/t4sB_jeSkSA'>
+                <img src='https://i.ytimg.com/vi/t4sB_jeSkSA/maxresdefault.jpg' alt='How to prepare your track for a mix / master engineer'>
+              </a>
+              "
+              src="https://www.youtube-nocookie.com/embed/t4sB_jeSkSA"
+              title="How to prepare your track for a mix / master engineer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+        </iframe>
       </div>
     </article>
 
-    <a href="https://discord.gg/EuAsv3ubPK">
-      <div class="running-line c-wh">
-        <p class="running-line_text line_text-1">join discord server - community for nerds - live talk and activities - helpful members - audio tips and tricks</p>
-        <p class="running-line_text line_text-2">join discord server - community for nerds - live talk and activities - helpful members - audio tips and tricks</p>
+    <article id="Merch">
+      <div class="flex merch-div">
+        <a class="merch-header" href="https://blakelw-shop.fourthwall.com/" target="_blank" title="Open Merch store"><h2>Merch store &#10095;</h2></a>
+        <p>You can support me with a follow or by getting my very own designed merch</p>
+        <span class="line"></span>
       </div>
-    </a>
+      <div class="container">
+        <div class="flex short-gap merch-container"></div>
+      </div>
+    </article>
 
+    <article id="Credits">
+        <h2>Credits</h2>
+        <div class="row" id="cardRow"></div>
+    </article>
+
+    <article id="About">
+      <div class="flex about-div">
+        <h2>About</h2>
+        <div id="about-0" class="button_outline_w btn-about-active">Blake Harrison</div>
+        <div id="about-1" class="button_outline_w">Loreweaver</div>
+        <div id="about-2" class="button_outline_w">Palevoid</div>
+      </div>
+      <div id="aboutCard" class="about-card"></div>
+    </article>
+
+    <article id="Contact">
+      <div class="flex contact-div">
+        <h2>Contact</h2>
+        <span class="line-xl"></span>
+        <h3><a href="./pages/guidelines.html">Guidelines&nbsp;for&nbsp;Submission</a></h3>
+      </div>
+
+      <div class="flex contact-container">
+        <div class="contact-info"></div>
+        <form class="form" target="_blank" action="https://formsubmit.co/blakelwcontact@gmail.com" method="POST">
+          <input type="text" name="_honey" style="display: none;">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://milkycocomoon.github.io/BlakeLW/index.html#Contact?a=1">
+
+          <div class="flex">
+            <label for="service_type">Service&nbsp;Type:</label>
+            <select class="input-style" name="Service&nbsp;Type" id="service_type" required>
+              <option value="mixing_&_mastering" selected>Mixing & Mastering</option>
+              <option value="post_production">Post Production</option>
+              <option value="guidance">Guidance</option>
+              <option value="collab">Collab</option>
+            </select>
+          </div>
+
+          <div class="flex">
+            <label for="name">Name:</label>
+            <input class="input-style" type="text" name="Name" id="name" required autocomplete="name">
+          </div>
+
+          <div class="flex">
+            <label for="email">Email:</label>
+            <input class="input-style" type="email" name="Email" id="email" required autocomplete="email">
+          </div>
+
+          <label for="description">Description:</label>
+          <textarea class="input-style textarea" name="Description" id="description" rows="10" placeholder="Write your task description here..." required></textarea>
+
+          <input class="input-style" type="submit" value="Submit">
+        </form>
+        <div class="overlay remove"></div>
+        <div class="success remove"></div>
+      </div>
+
+    </article>
   </main>
 
-  <footer class="dark-bg">
-    <div class="width padding flex flex-j-sb flex-al-c c-wh gap | footer-div">
+  <footer>
+    <div class="flex" style="justify-content: space-between;">
       <p><i>©2024 Blake Harrison. All rights reserved.<br>Website designed and developed by Milkycocomoon</i></p>
+      <a href="./pages/terms.html">Terms</a>
+      <a href="./pages/guidelines.html">Guidelines for Submission</a>
       <div>
-        <a href="https://discord.gg/EuAsv3ubPK"><img loading="lazy" class="icon" src="./assets/icons/Discord.svg" alt="Discord icon"></a>
-        <a href="https://www.facebook.com/profile.php?id=61558206276347"><img loading="lazy" class="icon" src="./assets/icons/Facebook.svg" alt="Facebook icon"></a>
-        <a href="https://www.instagram.com/theactualblake/"><img loading="lazy" class="icon" src="./assets/icons/Instagram.svg" alt="Instagram icon"></a>
-        <a href="https://open.spotify.com/artist/6sGwGYCziHNa1MUPXDVUbu?si=x3aeEQb1Rqe_5bNX4IR-5A"><img loading="lazy" class="icon" src="./assets/icons/Spotify.svg" alt="Spotify icon"></a>
-        <a href="https://www.youtube.com/@BlakeLW"><img loading="lazy" class="icon" src="./assets/icons/YouTube.svg" alt="YouTube icon"></a>
+        <a href="https://discord.gg/EuAsv3ubPK" class="icon" title="Discord Server"><img loading="lazy" src="./assets/icons/Discord.svg" alt="Discord icon"></a>
+        <a href="https://www.instagram.com/theactualblake/" class="icon" title="Instagram"><img loading="lazy" src="./assets/icons/Instagram.svg" alt="Instagram icon"></a>
+        <a href="https://open.spotify.com/artist/6sGwGYCziHNa1MUPXDVUbu?si=x3aeEQb1Rqe_5bNX4IR-5A" class="icon" title="Loreweaver - Spotify"><img loading="lazy" src="./assets/icons/Spotify.svg" alt="Spotify icon"></a>
+        <a href="https://www.youtube.com/@BlakeLW" class="icon" title="Youtube channel"><img loading="lazy" src="./assets/icons/YouTube.svg" alt="YouTube icon"></a>
+        <a href="https://patreon.com/BlakeHarrison/shop" class="icon" title="Patreon"><img loading="lazy" src="./assets/icons/Patreon.svg" alt="Patreon icon"></a>
       </div>
     </div>
   </footer>
   <script type="module" src="script.js"></script>
+
 </body>
 </html>
