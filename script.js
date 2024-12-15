@@ -21,6 +21,41 @@ window.addEventListener('scroll', function() {
     }
 });
 
+// HEADER BG IMAGE CHANGE
+const bgImg = [
+    'linear-gradient(var(--color-tr), var(--color-grayscale-800)), url(./assets/images/header_bg.webp)',
+    'linear-gradient(var(--color-tr), var(--color-grayscale-800)), url(./assets/images/header_bg_01.webp)',
+    'linear-gradient(var(--color-tr), var(--color-grayscale-800)), url(./assets/images/header_bg_02.webp)'
+];
+const darkImg = [1, 2];
+let bgImgNum = 0;
+
+function changeBackground() {
+    const header = document.querySelector('header');
+
+    const headerBackground = document.createElement('div');
+    headerBackground.classList.add('header-background');
+    document.querySelector('header').appendChild(headerBackground);
+
+    headerBackground.style.opacity = 0;
+
+    setTimeout(() => {
+        headerBackground.style.backgroundImage = bgImg[bgImgNum];
+
+        if (darkImg.includes(bgImgNum)) {
+            navbar.classList.add('darkImgBar');
+        } else {
+            navbar.classList.remove('darkImgBar');
+        }
+
+        headerBackground.style.opacity = 1;
+        bgImgNum = (bgImgNum + 1) % bgImg.length;
+    }, 1000);
+}
+
+setInterval(changeBackground, 5000);
+changeBackground();
+
 ///////////////////////////////////////////////////////////////////////////////////// SERVICES
 import servicesList from './js/dataServices.js';
 const servicesDiv = document.querySelector('.services-div');

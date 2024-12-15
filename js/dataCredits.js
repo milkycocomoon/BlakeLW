@@ -1,5 +1,11 @@
 const creditsList = [
     {
+        item: '07',
+        band: 'PALEVOID',
+        name: 'Colossus',
+        role: 'Post Production, Songwriting, Mix Prep',
+    },
+    {
         item: '06',
         band: 'PALEVOID',
         name: 'ERROR',
@@ -28,12 +34,6 @@ const creditsList = [
         band: 'LOREWEAVER',
         name: 'Cinereus V',
         role: 'Songwriting, Producing, Mixing & Mastering',
-    },
-    {
-        item: '01',
-        band: 'GEMINI',
-        name: 'Under an<br>Eternal Sun',
-        role: 'Post Production',
     },
 ]
 
