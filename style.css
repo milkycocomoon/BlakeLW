@@ -721,6 +721,10 @@ select {
         filter: none;
     }
 
+    .darkImgBar > * {
+        filter: none;
+    }
+
     .card-services {
         height: 18rem;
     }
