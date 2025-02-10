@@ -1,5 +1,11 @@
 const creditsList = [
     {
+        item: '08',
+        band: 'Ekaten',
+        name: 'Of Fates Untold',
+        role: 'Mixing & Mastering',
+    },
+    {
         item: '07',
         band: 'PALEVOID',
         name: 'Colossus',
