@@ -1,7 +1,13 @@
 const creditsList = [
     {
+        item: '09',
+        band: 'LOREWEAVER',
+        name: 'Revelation',
+        role: 'Songwriting, Producing, Mixing & Mastering',
+    },
+    {
         item: '08',
-        band: 'Ekaten',
+        band: 'EKATEN',
         name: 'Of Fates Untold',
         role: 'Mixing & Mastering',
     },

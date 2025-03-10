@@ -623,7 +623,7 @@ select {
 
 @media screen and (max-width:1400px) {
     .credit {
-        flex: 1 1 calc(30% - 3px);
+        flex: 1 1 calc(25% - 3px);
     }
 
     .credit-text > h4 {
